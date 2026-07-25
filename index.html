@@ -5,24 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prof. Ami Pedahzur | Academic Website</title>
   <meta name="description" content="Academic homepage with research, publications, teaching, and contact information.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="top">
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="site-bg" aria-hidden="true"></div>
   <header class="site-header">
     <a class="wordmark" href="#top">Academic Page</a>
     <nav aria-label="Primary">
       <a href="#research">Research</a>
+      <a href="#field-guide">Field Guide</a>
       <a href="#publications">Publications</a>
       <a href="#teaching">Teaching</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <main id="top">
+  <main id="main-content">
     <section class="hero card reveal">
       <div class="hero-copy">
         <p class="eyebrow">Professor, University of Haifa</p>
@@ -66,6 +69,45 @@
           <p>The Israeli radical right, political violence, and democratic resilience.</p>
         </article>
       </div>
+    </section>
+
+    <section id="field-guide" class="field-guide-feature reveal" aria-labelledby="field-guide-title">
+      <div class="guide-feature-copy">
+        <p class="eyebrow eyebrow-light">Open-access working edition</p>
+        <h2 id="field-guide-title">From Question to Evidence</h2>
+        <p class="guide-subtitle">A Living Field Guide for Qualitative Research</p>
+        <p>
+          A modular, practical book for building a defensible evidence base in an age of
+          information abundance and generative AI. The current edition includes two complete
+          modules, editable research resources, guided AI workflows, and explicit integrity
+          checkpoints.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-paper" href="field-guide/">Explore the field guide</a>
+          <a class="button button-outline-light" href="field-guide/book/">Read the current edition</a>
+        </div>
+      </div>
+      <aside class="edition-card" aria-label="Current edition information">
+        <div class="edition-status">
+          <span class="status-dot" aria-hidden="true"></span>
+          Working Edition 0.2
+        </div>
+        <dl>
+          <div>
+            <dt>Complete now</dt>
+            <dd>Evidence Map · Literature as Evidence</dd>
+          </div>
+          <div>
+            <dt>Last reviewed</dt>
+            <dd><time datetime="2026-07-25">25 July 2026</time></dd>
+          </div>
+          <div>
+            <dt>License</dt>
+            <dd>CC BY 4.0</dd>
+          </div>
+        </dl>
+        <p class="edition-note">Versioned releases remain available as the living edition develops.</p>
+      </aside>
     </section>
 
     <section id="publications" class="card reveal">
