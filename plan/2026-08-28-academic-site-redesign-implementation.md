@@ -891,6 +891,6 @@ Expected: the remote advances from the pre-redesign commit through the specifica
 
 - [ ] **Step 8: Verify the GitHub Pages deployment**
 
-Open `https://pedahzur.github.io/A.M.Pedahzur/` after the Pages workflow completes. Repeat the 375- and 1280-pixel smoke checks, verify all four cover requests return successfully under `/A.M.Pedahzur/assets/book-covers/`, activate the publication disclosure and one filter, click the Field Guide card, and confirm the browser console has no errors.
+Open `https://pedahzur.github.io/` after the Pages workflow completes. Repeat the 375- and 1280-pixel smoke checks, verify all four cover requests return successfully under `/A.M.Pedahzur/assets/book-covers/`, activate the publication disclosure and one filter, click the Field Guide card, and confirm the browser console has no errors.
 
 Expected: the live page matches the reviewed local source, relative paths work under the project subpath, and the eight approved improvements are visible and functional.

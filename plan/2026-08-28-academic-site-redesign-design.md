@@ -173,7 +173,7 @@ After automated tests pass, the homepage will receive keyboard-only and browser 
 
 After code review and a clean final test run, only the intended site files and cover assets will be committed using a Conventional Commit. The commit will be pushed to `main`, allowing the existing GitHub Pages workflow to deploy the same validated source.
 
-The live site at `https://pedahzur.github.io/A.M.Pedahzur/` will then be rechecked for the deployed commit, working relative paths, functional interactions, responsive behavior, and absence of console errors. Deployment is complete only when the live page reflects the changes and the browser checks pass.
+The live site at `https://pedahzur.github.io/` will then be rechecked for the deployed commit, working relative paths, functional interactions, responsive behavior, and absence of console errors. Deployment is complete only when the live page reflects the changes and the browser checks pass.
 
 ## Acceptance Criteria
 

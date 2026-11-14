@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start here | Ami Pedahzur</title>
+  <meta name="description" content="Set up a research folder that you and an AI assistant can both read, with a rules file you write yourself.">
+  <link rel="canonical" href="https://pedahzur.github.io/start-here/">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <meta property="og:site_name" content="Ami Pedahzur">
+  <meta property="og:title" content="Start here | Ami Pedahzur">
+  <meta property="og:description" content="Set up a research folder that you and an AI assistant can both read, with a rules file you write yourself.">
+  <meta property="og:url" content="https://pedahzur.github.io/start-here/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<div class="wrap">
+<header class="site-head">
+  <a class="name" href="../">Ami Pedahzur · Research with AI</a>
+  <nav aria-label="Primary"><a href="../">Challenges</a><a href="../start-here/" aria-current="page">Start here</a><a href="../principles/">Principles</a><a href="../field-guide/">Field guide</a><a href="../blog/">Essays</a><a href="../about.html">About</a></nav>
+</header>
+<main>
+
+<article class="panel page">
+  <p class="coord">Sheet 0 · Base camp</p>
+  <h1>Start here: a research folder and its rules</h1>
+  <p class="lede">A defensible corpus is not a large folder. It is a visible chain of decisions that connects a question to the records collected, the gaps accepted, and the point where collection paused. That chain needs a home.</p>
+  <div class="prose">
+    <h2><span>1</span>The rule</h2>
+    <p>The home must meet four conditions. It stores plain text, so the record stays readable in twenty years on any computer. It lives on your own machine, so sensitive material does not depend on a company's server. It preserves versions, so the question framed in July survives beside the question that replaced it in October. And it is legible to you and to the machine at the same time, so an AI assistant can read the map without owning it.</p>
+    <p>No single product meets all four conditions. Two tools meet them together.</p>
+    <h2><span>2</span>What you build</h2>
+    <p>Three things, in under an hour. A research vault: one folder of plain-text notes. An AI assistant connected to that folder. And a rules file named <code>CLAUDE.md</code>, which the assistant reads at the start of every session. It states, in your own words, what the assistant may propose and what only you decide.</p>
+    <p>Obsidian is a free note-taking application that opens a folder of ordinary text files. Delete it tomorrow and the notes remain. Claude Code is an AI assistant that runs on your computer and works with the files in a folder you choose. It requires no programming.</p>
+    <h2><span>3</span>The folder</h2>
+<pre><code>Research Vault/
+├── CLAUDE.md      the assistant's rules
+├── 00 Map/        the evidence-map hub
+├── 10 Frames/     dated question frames
+├── 20 Concepts/   the concept grid
+├── 30 Sources/    source families and records
+├── 40 Searches/   the search log
+├── 50 Claims/     claims and the evidence register
+├── 60 Logs/       AI audit log and stopping rule
+└── 90 Templates/  note templates</code></pre>
+    <p>Empty folders are a promise, not a defect. An explained blank becomes part of the method.</p>
+    <h2><span>4</span>The six rules</h2>
+    <p>The example rules file in the kit states six rules. The assistant proposes and does not decide. It never invents a source, a quotation or a file, and says so when it cannot verify. It cites the file behind every claim about your materials. It asks before creating, changing or moving any note. Its consequential suggestions, accepted or rejected, are logged with a reason. And no confidential or participant-identifying material enters the vault or any prompt.</p>
+    <h2><span>5</span>The first conversation</h2>
+<pre><code>Read CLAUDE.md and state the rules you will follow in this vault.
+Then list the folders you can see and say what belongs in each.</code></pre>
+    <p>Read the restatement against the file. If the assistant weakens a rule or invents a folder, correct the file, not the chat. The file persists across sessions. The chat does not.</p>
+    <h2><span>6</span>Where it fails</h2>
+    <div class="fail-box"><p>The rules file is a discipline aid, not a security mechanism. It shapes how the assistant behaves. It does not control what the assistant can see.</p><p>What protects sensitive material is the decision about what enters the folder. That decision belongs to you and to the project's ethical obligations.</p></div>
+    <h2><span>7</span>Adapt it</h2>
+    <div class="kit-box"><p>In the kit: the starter vault, ready to open, and the example rules file. Replace the name, the field and the research question with your own. Change at least one rule, so the file records a decision and not a download.</p><a class="btn" href="https://github.com/pedahzur/research-workflows/tree/main/start-here">Open the kit on GitHub</a></div>
+  </div>
+</article>
+
+</main>
+<footer class="site-foot panel">
+  <span>Ami Pedahzur, University of Haifa</span>
+  <span>Text: CC BY 4.0 · <a href="https://github.com/pedahzur">GitHub</a> · <a href="../about.html#contact">Contact</a></span>
+</footer>
+</div>
+</body>
+</html>

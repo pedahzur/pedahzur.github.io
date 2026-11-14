@@ -270,7 +270,7 @@ def page(slug: str, body: str, status: str) -> str:
     data = POSTS[slug]
     title = data["title"]
     description = data["description"]
-    english_url = f"https://pedahzur.github.io/A.M.Pedahzur/blog/{slug}/"
+    english_url = f"https://pedahzur.github.io/blog/{slug}/"
     hebrew_url = english_url + "he/"
     structured = {
         "@context": "https://schema.org",
@@ -333,11 +333,11 @@ def page(slug: str, body: str, status: str) -> str:
     <a class="wordmark" href="../../../">עמי פדהצור</a>
     <nav aria-label="ניווט ראשי">
       <a href="../../../">בית</a>
-      <a href="../../../#about">אודות</a>
-      <a href="../../../#books">ספרים</a>
-      <a href="../../../#articles">מאמרים</a>
+      <a href="../../../about.html#about">אודות</a>
+      <a href="../../../about.html#books">ספרים</a>
+      <a href="../../../about.html#articles">מאמרים</a>
       <a href="../../" aria-current="location">בלוג</a>
-      <a href="../../../#contact">יצירת קשר</a>
+      <a href="../../../about.html#contact">יצירת קשר</a>
     </nav>
   </header>
   <main id="main-content">
@@ -416,7 +416,7 @@ def render_index_translation_link(
 def render_translation_indexes(statuses: dict[str, str]) -> dict[Path, str]:
     indexes = (
         (BLOG / "index.html", "{slug}/he/"),
-        (ROOT / "index.html", "blog/{slug}/he/"),
+        (ROOT / "about.html", "blog/{slug}/he/"),
     )
     rendered_indexes: dict[Path, str] = {}
     for index_path, href_template in indexes:

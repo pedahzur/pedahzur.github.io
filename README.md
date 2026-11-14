@@ -14,13 +14,13 @@ After pushing to `main`:
 
 Expected URL:
 
-- `https://pedahzur.github.io/A.M.Pedahzur/`
+- `https://pedahzur.github.io/`
 
 ## Living Field Guide
 
 The open-access book is published as a subsite:
 
-- Landing page: `https://pedahzur.github.io/A.M.Pedahzur/field-guide/`
-- HTML edition: `https://pedahzur.github.io/A.M.Pedahzur/field-guide/book/`
-- Historical Sources as Evidence: `https://pedahzur.github.io/A.M.Pedahzur/field-guide/book/content/20-historical-sources-as-evidence.html`
+- Landing page: `https://pedahzur.github.io/field-guide/`
+- HTML edition: `https://pedahzur.github.io/field-guide/book/`
+- Historical Sources as Evidence: `https://pedahzur.github.io/field-guide/book/content/20-historical-sources-as-evidence.html`
 - Canonical manuscript source: `https://github.com/pedahzur/from-question-to-evidence`

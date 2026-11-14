@@ -53,11 +53,11 @@ def test_academic_blog_is_discoverable(self) -> None:
         blog,
     )
     self.assertIn(
-        '<link rel="canonical" href="https://pedahzur.github.io/A.M.Pedahzur/blog/">',
+        '<link rel="canonical" href="https://pedahzur.github.io/blog/">',
         blog,
     )
     self.assertIn('href="blog.css"', blog)
-    self.assertIn("https://pedahzur.github.io/A.M.Pedahzur/blog/", sitemap)
+    self.assertIn("https://pedahzur.github.io/blog/", sitemap)
 ```
 
 - [ ] **Step 2: Run the test and verify RED**
@@ -94,7 +94,7 @@ Use `apply_patch` to add `<a href="blog/">Blog</a>` after `Articles` in the prim
 
 - [ ] **Step 4: Create the blog index and base stylesheet**
 
-Create a complete HTML5 page with canonical URL `https://pedahzur.github.io/A.M.Pedahzur/blog/`, the existing Google Font imports, `blog.css`, a skip link, a relative homepage wordmark (`../`), primary navigation, an editorial masthead, and one lead card whose relative post URL is `academic-rigor-and-writing-for-a-wider-audience/`. The post card must display `August 12, 2026`, `49 min read`, the exact title, and this deck:
+Create a complete HTML5 page with canonical URL `https://pedahzur.github.io/blog/`, the existing Google Font imports, `blog.css`, a skip link, a relative homepage wordmark (`../`), primary navigation, an editorial masthead, and one lead card whose relative post URL is `academic-rigor-and-writing-for-a-wider-audience/`. The post card must display `August 12, 2026`, `49 min read`, the exact title, and this deck:
 
 ```text
 Research gives an academic book its right to exist. Writing gives that research a form readers can enter, examine, and remember.
@@ -123,8 +123,8 @@ Start `blog/blog.css` with the exact shared tokens used by both blog pages:
 Insert entries dated `2026-08-12` for:
 
 ```text
-https://pedahzur.github.io/A.M.Pedahzur/blog/
-https://pedahzur.github.io/A.M.Pedahzur/blog/academic-rigor-and-writing-for-a-wider-audience/
+https://pedahzur.github.io/blog/
+https://pedahzur.github.io/blog/academic-rigor-and-writing-for-a-wider-audience/
 ```
 
 - [ ] **Step 6: Run discovery and link tests and verify GREEN**
@@ -174,7 +174,7 @@ def test_academic_blog_post_preserves_article_contract(self) -> None:
 
     self.assertIn('"@type": "ScholarlyArticle"', post)
     self.assertIn(
-        '<link rel="canonical" href="https://pedahzur.github.io/A.M.Pedahzur/blog/academic-rigor-and-writing-for-a-wider-audience/">',
+        '<link rel="canonical" href="https://pedahzur.github.io/blog/academic-rigor-and-writing-for-a-wider-audience/">',
         post,
     )
     self.assertIn('href="../blog.css"', post)
@@ -225,7 +225,7 @@ Read the fragment, then create the final page with `apply_patch`. Wrap it in a c
   "headline": "Between Academic Rigor and Writing for a Wider Audience",
   "author": {"@type": "Person", "name": "Ami Pedahzur"},
   "datePublished": "2026-08-12",
-  "url": "https://pedahzur.github.io/A.M.Pedahzur/blog/academic-rigor-and-writing-for-a-wider-audience/"
+  "url": "https://pedahzur.github.io/blog/academic-rigor-and-writing-for-a-wider-audience/"
 }
 ```
 
@@ -446,9 +446,9 @@ Expected: PR merged and the `Deploy static site to GitHub Pages` run completes s
 Confirm HTTP 200 and inspect the rendered pages at:
 
 ```text
-https://pedahzur.github.io/A.M.Pedahzur/
-https://pedahzur.github.io/A.M.Pedahzur/blog/
-https://pedahzur.github.io/A.M.Pedahzur/blog/academic-rigor-and-writing-for-a-wider-audience/
+https://pedahzur.github.io/
+https://pedahzur.github.io/blog/
+https://pedahzur.github.io/blog/academic-rigor-and-writing-for-a-wider-audience/
 ```
 
 Verify that the live homepage links to the blog, the blog links to the post, the post title, sixteen note definitions, and twenty backlinks render, and no private path appears in public HTML.

@@ -701,7 +701,7 @@ class TranslationStatusBuildTests(unittest.TestCase):
         (root / "blog" / "index.html").write_text(
             f"<main>{blog_links}</main>\n", encoding="utf-8"
         )
-        (root / "index.html").write_text(
+        (root / "about.html").write_text(
             f"<main>{homepage_links}</main>\n", encoding="utf-8"
         )
 
@@ -802,7 +802,7 @@ class TranslationStatusBuildTests(unittest.TestCase):
 
                 expected_links = (
                     (blog / "index.html", f"{self.TARGET_SLUG}/he/"),
-                    (root / "index.html", f"blog/{self.TARGET_SLUG}/he/"),
+                    (root / "about.html", f"blog/{self.TARGET_SLUG}/he/"),
                 )
                 for index_path, href in expected_links:
                     with self.subTest(status=status, index=index_path.name):
@@ -819,7 +819,7 @@ class SiteContractTests(unittest.TestCase):
         sources = tuple(sorted((ROOT / "blog" / "sources" / "he").glob("*.md")))
         self.assertGreaterEqual(len(sources), 2)
         index_collectors = {}
-        for index_path in (ROOT / "blog" / "index.html", ROOT / "index.html"):
+        for index_path in (ROOT / "blog" / "index.html", ROOT / "about.html"):
             collector = TranslationRenderingCollector()
             collector.feed(index_path.read_text(encoding="utf-8"))
             index_collectors[index_path] = collector
@@ -846,7 +846,7 @@ class SiteContractTests(unittest.TestCase):
             )
             expected_links = (
                 (ROOT / "blog" / "index.html", f"{slug}/he/"),
-                (ROOT / "index.html", f"blog/{slug}/he/"),
+                (ROOT / "about.html", f"blog/{slug}/he/"),
             )
             for index_path, href in expected_links:
                 with self.subTest(post=slug, index=index_path.name):
@@ -857,7 +857,7 @@ class SiteContractTests(unittest.TestCase):
 
     def test_every_blog_post_has_a_complete_linked_hebrew_edition(self) -> None:
         blog = (ROOT / "blog" / "index.html").read_text(encoding="utf-8")
-        homepage = (ROOT / "index.html").read_text(encoding="utf-8")
+        homepage = (ROOT / "about.html").read_text(encoding="utf-8")
         sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
         english_posts = tuple(sorted((ROOT / "blog").glob("*/index.html")))
         pairs = tuple(
@@ -872,7 +872,7 @@ class SiteContractTests(unittest.TestCase):
                 english = english_path.read_text(encoding="utf-8")
                 hebrew = hebrew_path.read_text(encoding="utf-8")
                 english_url = (
-                    "https://pedahzur.github.io/A.M.Pedahzur/"
+                    "https://pedahzur.github.io/"
                     + english_path.relative_to(ROOT).parent.as_posix()
                     + "/"
                 )
@@ -1019,7 +1019,7 @@ class SiteContractTests(unittest.TestCase):
         self.assertEqual("4px", focus_rule["outline-offset"])
 
     def test_academic_blog_is_discoverable(self) -> None:
-        homepage = (ROOT / "index.html").read_text(encoding="utf-8")
+        homepage = (ROOT / "about.html").read_text(encoding="utf-8")
         blog_path = ROOT / "blog" / "index.html"
         sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
 
@@ -1033,19 +1033,19 @@ class SiteContractTests(unittest.TestCase):
             blog,
         )
         self.assertIn(
-            '<link rel="canonical" href="https://pedahzur.github.io/A.M.Pedahzur/blog/">',
+            '<link rel="canonical" href="https://pedahzur.github.io/blog/">',
             blog,
         )
         self.assertIn('href="blog.css"', blog)
-        self.assertIn("https://pedahzur.github.io/A.M.Pedahzur/blog/", sitemap)
+        self.assertIn("https://pedahzur.github.io/blog/", sitemap)
         self.assertIn(
-            "<loc>https://pedahzur.github.io/A.M.Pedahzur/</loc>\n"
+            "<loc>https://pedahzur.github.io/</loc>\n"
             "    <lastmod>2026-08-14</lastmod>",
             sitemap,
         )
 
     def test_newspaper_agent_post_is_discoverable(self) -> None:
-        homepage = (ROOT / "index.html").read_text(encoding="utf-8")
+        homepage = (ROOT / "about.html").read_text(encoding="utf-8")
         blog = (ROOT / "blog" / "index.html").read_text(encoding="utf-8")
         sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
         title = "From One Report to Two Histories"
@@ -1056,7 +1056,7 @@ class SiteContractTests(unittest.TestCase):
         self.assertIn(title, blog)
         self.assertIn(f'href="{slug}"', blog)
         self.assertIn(
-            "https://pedahzur.github.io/A.M.Pedahzur/blog/" + slug,
+            "https://pedahzur.github.io/blog/" + slug,
             sitemap,
         )
 
@@ -1072,7 +1072,7 @@ class SiteContractTests(unittest.TestCase):
             "og:description": (
                 "Essays on research, evidence, and academic craft by Ami Pedahzur."
             ),
-            "og:url": "https://pedahzur.github.io/A.M.Pedahzur/blog/",
+            "og:url": "https://pedahzur.github.io/blog/",
             "twitter:card": "summary",
             "twitter:title": "Writing Research for Readers | Ami Pedahzur",
             "twitter:description": (
@@ -1123,7 +1123,7 @@ class SiteContractTests(unittest.TestCase):
         self.assertIn('<a href="../" aria-current="location">Blog</a>', article)
 
     def test_primary_navigation_links_to_blog_on_all_root_pages(self) -> None:
-        root_pages = [ROOT / "index.html", *sorted(ROOT.glob("book-*.html"))]
+        root_pages = [ROOT / "about.html", *sorted(ROOT.glob("book-*.html"))]
 
         for page in root_pages:
             with self.subTest(page=page.name):
@@ -1142,7 +1142,7 @@ class SiteContractTests(unittest.TestCase):
 
         self.assertIn('"@type": "ScholarlyArticle"', post)
         self.assertIn(
-            '<link rel="canonical" href="https://pedahzur.github.io/A.M.Pedahzur/blog/academic-rigor-and-writing-for-a-wider-audience/">',
+            '<link rel="canonical" href="https://pedahzur.github.io/blog/academic-rigor-and-writing-for-a-wider-audience/">',
             post,
         )
         self.assertIn('href="../blog.css"', post)
@@ -1164,7 +1164,7 @@ class SiteContractTests(unittest.TestCase):
 
         self.assertIn('"@type": "ScholarlyArticle"', post)
         self.assertIn(
-            '<link rel="canonical" href="https://pedahzur.github.io/A.M.Pedahzur/blog/from-one-report-to-two-histories/">',
+            '<link rel="canonical" href="https://pedahzur.github.io/blog/from-one-report-to-two-histories/">',
             post,
         )
         self.assertIn('href="../blog.css"', post)
@@ -1318,13 +1318,13 @@ class SiteContractTests(unittest.TestCase):
 
     def test_field_guide_publication_contract(self) -> None:
         landing = (ROOT / "field-guide" / "index.html").read_text(encoding="utf-8")
-        homepage = (ROOT / "index.html").read_text(encoding="utf-8")
+        homepage = (ROOT / "about.html").read_text(encoding="utf-8")
 
         self.assertIn("Working Edition 0.2", landing)
         self.assertIn("Read the current edition", landing)
         self.assertIn("Collection as Evidence", landing)
         self.assertIn(
-            'href="https://pedahzur.github.io/A.M.Pedahzur/field-guide/"',
+            'href="https://pedahzur.github.io/field-guide/"',
             landing,
         )
         self.assertIn('href="guide.css"', landing)
@@ -1335,7 +1335,7 @@ class SiteContractTests(unittest.TestCase):
 
         sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
         self.assertIn(
-            "https://pedahzur.github.io/A.M.Pedahzur/field-guide/",
+            "https://pedahzur.github.io/field-guide/",
             sitemap,
         )
 
@@ -1547,7 +1547,7 @@ class SiteContractTests(unittest.TestCase):
         )
 
     def test_homepage_publications_default_to_five_and_filters_stay_complete(self) -> None:
-        homepage = (ROOT / "index.html").read_text(encoding="utf-8")
+        homepage = (ROOT / "about.html").read_text(encoding="utf-8")
         scripts = (ROOT / "script.js").read_text(encoding="utf-8")
 
         self.assertIn('id="publication-toggle"', homepage)
@@ -1848,7 +1848,7 @@ process.stdout.write(JSON.stringify([
             self.assertEqual(".35rem", declarations.get("text-underline-offset"))
 
     def test_homepage_uses_current_cv_and_minimal_hero(self) -> None:
-        homepage = (ROOT / "index.html").read_text(encoding="utf-8")
+        homepage = (ROOT / "about.html").read_text(encoding="utf-8")
         styles = (ROOT / "styles.css").read_text(encoding="utf-8")
         cv_name = "Ami_Pedahzur_CV_August_2026.pdf"
 
@@ -1871,7 +1871,7 @@ process.stdout.write(JSON.stringify([
             self.assertNotIn(retired_content, homepage)
 
     def test_homepage_prioritizes_primary_actions_and_current_work(self) -> None:
-        homepage = (ROOT / "index.html").read_text(encoding="utf-8")
+        homepage = (ROOT / "about.html").read_text(encoding="utf-8")
         styles = (ROOT / "styles.css").read_text(encoding="utf-8")
 
         self.assertIn('class="hero-primary-actions"', homepage)
@@ -1940,7 +1940,7 @@ process.stdout.write(JSON.stringify([
         self.assertIn("grid-template-columns: 1fr;", primary_actions_narrow)
 
     def test_homepage_header_navigation_is_aligned_and_accessible(self) -> None:
-        homepage = (ROOT / "index.html").read_text(encoding="utf-8")
+        homepage = (ROOT / "about.html").read_text(encoding="utf-8")
         styles = (ROOT / "styles.css").read_text(encoding="utf-8")
 
         self.assertIn('class="header-inner"', homepage)
@@ -1949,7 +1949,7 @@ process.stdout.write(JSON.stringify([
         primary_nav = homepage.split('<nav aria-label="Primary">', 1)[1].split(
             "</nav>", 1
         )[0]
-        self.assertEqual(6, primary_nav.count('class="nav-link'))
+        self.assertEqual(7, primary_nav.count('class="nav-link'))
         self.assertIn('data-nav-section="top"', homepage)
         for target in ("about", "books", "articles", "contact"):
             self.assertIn(f'data-nav-section="{target}"', homepage)
@@ -1971,7 +1971,7 @@ process.stdout.write(JSON.stringify([
         )
 
     def test_retired_method_feature_and_book_are_not_public(self) -> None:
-        homepage = (ROOT / "index.html").read_text(encoding="utf-8")
+        homepage = (ROOT / "about.html").read_text(encoding="utf-8")
         scripts = (ROOT / "script.js").read_text(encoding="utf-8")
         sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
 
