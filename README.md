@@ -1,19 +1,26 @@
-# pedahzur.github.io
+# A.M.Pedahzur
 
-Academic website for Prof. Ami Pedahzur, deployed via GitHub Pages.
+Academic website for Prof. Ami Pedahzur.
+
+## Deployment
+
+This repository is set up for GitHub Pages via GitHub Actions.
+
+After pushing to `main`:
+
+1. Open repository `Settings` -> `Pages`.
+2. Set `Source` to `GitHub Actions`.
+3. The site will deploy automatically on each push to `main`.
+
+Expected URL:
+
+- `https://pedahzur.github.io/`
 
 ## Living Field Guide
 
-The site publishes a versioned snapshot of *From Question to Evidence: A Living Field
-Guide for Qualitative Research* under `/field-guide/`. The browsable book, PDF, Word
-manuscript, and editable resources are generated from the canonical
-[`pedahzur/from-question-to-evidence`](https://github.com/pedahzur/from-question-to-evidence)
-Quarto source.
+The open-access book is published as a subsite:
 
-The current public snapshot is Working Edition 0.2, last reviewed 25 July 2026.
-
-## Local verification
-
-```bash
-python3 -m unittest discover -s tests -v
-```
+- Landing page: `https://pedahzur.github.io/field-guide/`
+- HTML edition: `https://pedahzur.github.io/field-guide/book/`
+- Historical Sources as Evidence: `https://pedahzur.github.io/field-guide/book/content/20-historical-sources-as-evidence.html`
+- Canonical manuscript source: `https://github.com/pedahzur/from-question-to-evidence`

@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.29">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Ami Pedahzur">
+<meta name="author" content="Jonathan Grossman">
+<meta name="dcterms.date" content="2026-08-01">
+<meta name="description" content="Use AI dictation and multilingual text-to-speech to capture ideas, inspect prose, and preserve an auditable writing record.">
+
+<title>23&nbsp; Writing by Voice, Revising by Ear – From Question to Evidence</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../content/skills-and-agents-lab.html" rel="next">
+<link href="../content/20-pkm-and-ai-research-infrastructure.html" rel="prev">
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dfa48a90d809c806c7ea2d5aecd9fc66.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-bcf1b9e99fa740266bb652366786c113.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/21-writing-by-voice-revising-by-ear.html"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Writing by Voice, Revising by Ear</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">From Question to Evidence</a> 
+        <div class="sidebar-tools-main">
+    <div class="dropdown">
+      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../From-Question-to-Evidence.docx">
+              <i class="bi bi-file-word pe-1"></i>
+            Download Docx
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../From-Question-to-Evidence.pdf">
+              <i class="bi bi-file-pdf pe-1"></i>
+            Download PDF
+            </a>
+          </li>
+      </ul>
+    </div>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=|url|" title="LinkedIn" class="quarto-navigation-tool px-1" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">From Question to Evidence</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/01-origins-and-purpose.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Origins and Purpose</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/02-evidence-map-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Evidence Map</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/03-frame.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Stage 1: Frame the Question</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/04-decompose.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Stage 2: Decompose the Question</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/05-map-source-families.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Stage 3: Map Source Families</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/06-search-iteratively.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Stage 4: Search Iteratively</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/07-evaluate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Stage 5: Evaluate Evidence</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/08-test-coverage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Stage 6: Test Coverage</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/09-produce-evidence-map.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Stage 7: Produce the Evidence Map</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/12-literature-as-evidence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Literature as Evidence</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/13-define-review.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Stage 1: Define the Review</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/14-map-concepts-vocabulary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Stage 2: Map Concepts and Vocabulary</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/15-discover-literature.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Stage 3: Discover Through Multiple Routes</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/16-evaluate-literature.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Stage 4: Evaluate Sources and Claims</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/17-read-annotate-compare.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Stage 5: Read, Annotate, and Compare</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/18-synthesize-audit-stop.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Stage 6: Synthesize, Audit, and Stop</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/19-review-articles-and-meta-analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Review Articles and Meta-Analysis in Transition</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/19-building-event-databases-with-ai.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Building Event Databases with AI</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/20-historical-sources-as-evidence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Historical Sources as Evidence</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/19-ai-research-integrity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">AI and Research Integrity</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/20-pkm-and-ai-research-infrastructure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">From Notes to Research Infrastructure</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/21-writing-by-voice-revising-by-ear.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Writing by Voice, Revising by Ear</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/skills-and-agents-lab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Skills and Agents Lab</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/20-next-steps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Building the Full Field Guide</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">References</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul class="collapse">
+  <li><a href="#orientation" id="toc-orientation" class="nav-link active" data-scroll-target="#orientation"><span class="header-section-number">23.1</span> Orientation</a></li>
+  <li><a href="#learn" id="toc-learn" class="nav-link" data-scroll-target="#learn"><span class="header-section-number">23.2</span> Learn</a></li>
+  <li><a href="#worked-example" id="toc-worked-example" class="nav-link" data-scroll-target="#worked-example"><span class="header-section-number">23.3</span> Worked Example</a></li>
+  <li><a href="#try-it" id="toc-try-it" class="nav-link" data-scroll-target="#try-it"><span class="header-section-number">23.4</span> Try It</a></li>
+  <li><a href="#guided-ai-workflow" id="toc-guided-ai-workflow" class="nav-link" data-scroll-target="#guided-ai-workflow"><span class="header-section-number">23.5</span> Guided AI Workflow</a></li>
+  <li><a href="#integrity-checkpoint" id="toc-integrity-checkpoint" class="nav-link" data-scroll-target="#integrity-checkpoint"><span class="header-section-number">23.6</span> Integrity Checkpoint</a></li>
+  <li><a href="#save-the-artifact" id="toc-save-the-artifact" class="nav-link" data-scroll-target="#save-the-artifact"><span class="header-section-number">23.7</span> Save the Artifact</a></li>
+  <li><a href="#advanced-practice" id="toc-advanced-practice" class="nav-link" data-scroll-target="#advanced-practice"><span class="header-section-number">23.8</span> Advanced Practice</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Writing by Voice, Revising by Ear</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-contents">
+             <p>Ami Pedahzur </p>
+             <p>Jonathan Grossman </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 1, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="orientation" class="level2" data-number="23.1">
+<h2 data-number="23.1" class="anchored" data-anchor-id="orientation"><span class="header-section-number">23.1</span> Orientation</h2>
+<p>Academic writing is often described as if it begins at a keyboard and ends on a page. This description excludes two valuable modes of work. A researcher can speak a draft before typing it, and can listen to a written draft before revising it. Current speech-recognition systems have reduced the effort required to turn spoken language into editable text. Current text-to-speech systems can read a draft aloud in several languages, at different speeds, while the writer follows the text on screen.</p>
+<p>These two directions perform different scholarly functions. Dictation reduces the friction of capture. It can preserve an argument that is easier to explain aloud than to type, support writers who think through speech, and make writing more accessible when a keyboard is difficult to use. Listening creates distance from a familiar draft. It can expose missing words, repetition, overloaded sentences, abrupt transitions, and translations that look acceptable on the page but sound unnatural.</p>
+<p>Neither operation is neutral. Speech recognition interprets sound and may alter names, numbers, quotations, punctuation, or specialized terms. Text-to-speech interprets written language through pronunciation, pacing, and emphasis. A fluent voice can make a weak argument sound finished. A mistaken pronunciation can make a correct term sound wrong. Both systems may send text or audio to an external service. The operative question is therefore not whether voice tools are fast. It is how to use their speed while preserving meaning, privacy, and a visible record of revision.</p>
+<p>This chapter develops a round-trip method. The researcher moves from a brief to a spoken draft, from the spoken draft to a verified text, from the verified text to a listening copy, and from listening notes to a revised canonical draft. The method does not depend on one application. Dated tool cards for <a href="https://github.com/pedahzur/from-question-to-evidence/blob/revise/referee-pass-2026-07-14/docs/tool-cards/wispr-flow.md">Wispr Flow</a> and <a href="https://github.com/pedahzur/from-question-to-evidence/blob/revise/referee-pass-2026-07-14/docs/tool-cards/speechify.md">Speechify</a> record current product details separately from the method.</p>
+</section>
+<section id="learn" class="level2" data-number="23.2">
+<h2 data-number="23.2" class="anchored" data-anchor-id="learn"><span class="header-section-number">23.2</span> Learn</h2>
+<section id="dictation-is-composition-not-automatic-transcription-of-thought" class="level3" data-number="23.2.1">
+<h3 data-number="23.2.1" class="anchored" data-anchor-id="dictation-is-composition-not-automatic-transcription-of-thought"><span class="header-section-number">23.2.1</span> Dictation is composition, not automatic transcription of thought</h3>
+<p>Dictation is often treated as a faster keyboard. In practice, it changes the composition task. Spoken drafts tend to include repetition, unfinished syntax, late qualifications, and ideas that arrive in a different order from the final argument. Research on voice-based text authoring shows that the work extends well beyond word recognition. Writers must manage ambiguity, review what the system captured, and move between speaking and visible text.<span class="citation" data-cites="liu2022typist"><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></span> Recent work on LLM-assisted speech writing reaches a similar conclusion. Speech can produce useful material quickly, but the writer still needs control over selection, ordering, and revision.<span class="citation" data-cites="lin2024rambler"><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></span></p>
+<p>A productive session therefore begins with a small capture brief. The brief names the purpose of the passage, the claim under consideration, the evidence that may be used, the material that must not be supplied to the application, and the desired length. It does not script every sentence. Its purpose is to keep the spoken draft inside a defined scholarly task.</p>
+<p>The first transcript should remain a capture artifact. Correction at this stage is limited to fidelity: names, dates, technical terms, punctuation that changes meaning, and words that the system misheard. Structural revision belongs in a separate file or version. This separation prevents a polished paragraph from concealing what the researcher originally said and what the software or a later AI operation changed.</p>
+</section>
+<section id="preserve-the-source-and-each-transformation" class="level3" data-number="23.2.2">
+<h3 data-number="23.2.2" class="anchored" data-anchor-id="preserve-the-source-and-each-transformation"><span class="header-section-number">23.2.2</span> Preserve the source and each transformation</h3>
+<p>A voice-writing session can produce several related objects: a capture brief, an audio recording if retention is permitted, the raw recognized text, a corrected transcript, a structured draft, a listening copy, listening notes, and the revised manuscript. Not every project needs to retain audio. A writer may choose live dictation precisely to avoid storing a recording. The record should state that choice rather than imply that a source file exists.</p>
+<p>The raw transcript and the corrected transcript should not silently replace one another. A correction such as changing a misspelled author name is different from rewriting an uncertain sentence. The first restores fidelity. The second changes the prose. Version history, tracked changes, or a short correction log makes the difference visible.</p>
+<p>This rule becomes more important when an AI system cleans a transcript. Removal of fillers may be harmless in a personal writing draft, but harmful in an interview transcript where hesitation, repair, or code-switching carries meaning. The research function of the material determines which transformations are allowed. A dictated manuscript draft and a participant interview may both begin as audio, but they are not governed by the same evidentiary standard.</p>
+</section>
+<section id="separate-capture-correction-structure-and-judgment" class="level3" data-number="23.2.3">
+<h3 data-number="23.2.3" class="anchored" data-anchor-id="separate-capture-correction-structure-and-judgment"><span class="header-section-number">23.2.3</span> Separate capture, correction, structure, and judgment</h3>
+<p>The round-trip method assigns one main task to each pass. The capture pass records ideas without requiring finished prose. The correction pass checks the recognized text against what was said. The structure pass turns spoken material into an argument. The listening pass identifies audible problems. The judgment pass tests claims, evidence, qualifications, and citations.</p>
+<p>Combining the passes creates predictable errors. Editing while dictating can restore the keyboard bottleneck. Asking an AI system to correct and reorganize at the same time can make it impossible to tell whether it repaired recognition or changed the argument. Listening for grammar, causal logic, citation support, and translation accuracy in one pass divides attention. A staged procedure is slower than a single command but faster than reconstructing an undocumented change.</p>
+</section>
+<section id="listen-for-a-defined-class-of-problems" class="level3" data-number="23.2.4">
+<h3 data-number="23.2.4" class="anchored" data-anchor-id="listen-for-a-defined-class-of-problems"><span class="header-section-number">23.2.4</span> Listen for a defined class of problems</h3>
+<p>Text-to-speech is valuable because it reads the visible text rather than the sentence the writer remembers intending to write. An experimental study of 51 first-year college writers found that text-to-speech could support proofreading, but did not produce better local or global revision than the comparison condition.<span class="citation" data-cites="garrison2009tts"><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></span> Listening should therefore be assigned a limited role. It is a diagnostic pass, not peer review and not an argument audit.</p>
+<p>Three listening passes serve different purposes. A slow proofing pass can expose omitted words, duplicate phrases, punctuation problems, and malformed citations. A normal-speed prose pass can reveal sentence length, rhythm, transitions, and paragraphs that carry too many claims. A faster argument pass can test whether the main line remains intelligible when the listener does not stop to repair it mentally. The writer records the location and type of each problem, then revises the canonical text after the listening session.</p>
+<p>The listening copy may remove footnote markers, long URLs, tables, and reference lists that interrupt playback. It is a disposable derivative. The canonical manuscript remains unchanged until the writer accepts a revision. This distinction also prevents an accessibility copy from becoming an undocumented new edition.</p>
+</section>
+<section id="treat-multilingual-use-as-a-benchmarked-workflow" class="level3" data-number="23.2.5">
+<h3 data-number="23.2.5" class="anchored" data-anchor-id="treat-multilingual-use-as-a-benchmarked-workflow"><span class="header-section-number">23.2.5</span> Treat multilingual use as a benchmarked workflow</h3>
+<p>Voice tools can help a multilingual scholar draft in the language in which an idea arrives and later inspect prose in the publication language. They can also read a translated passage aloud to reveal awkward syntax or a borrowed expression that does not travel well. They cannot establish that the translation preserves meaning. Source and target texts still require comparison, and consequential translations require a qualified human reader.</p>
+<p>Language switching deserves special caution. Current multilingual recognition systems may perform well in each supported language while failing when a speaker changes language within an utterance. Code-switched speech remains a distinct evaluation problem even for multilingual models.<span class="citation" data-cites="ugan2024decm"><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></span> Names, transliterated terms, acronyms, and quotations create similar difficulties. A session that alternates among Hebrew, English, and Arabic should not be evaluated by the tool’s general claim to support all three.</p>
+<p>Before adopting a system, the researcher should prepare a small benchmark in each working language. It should contain the names, places, citations, dates, technical terms, and language switches that occur in the project. The same passage is dictated and played back after major application or model changes. Errors are recorded by type, not merely counted. A wrong comma and a wrong year do not carry the same research cost.</p>
+<p>Reading aloud also places different demands on multilingual writers. A recent study found that the value of oral revision differed with writers’ second-language proficiency and the attention required by the task.<span class="citation" data-cites="kim2025myth"><a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></span> Listening tools should expand the available revision modes, not impose one supposedly universal way of hearing good prose.</p>
+</section>
+<section id="choose-the-processing-environment-by-the-sensitivity-of-the-text" class="level3" data-number="23.2.6">
+<h3 data-number="23.2.6" class="anchored" data-anchor-id="choose-the-processing-environment-by-the-sensitivity-of-the-text"><span class="header-section-number">23.2.6</span> Choose the processing environment by the sensitivity of the text</h3>
+<p>Convenience does not determine whether material may enter a service. Public prose and fictional practice text carry fewer constraints than unpublished coauthored work. Participant material, identifiable field notes, restricted archives, allegations, personnel information, and embargoed findings may be prohibited from consumer cloud systems by consent forms, ethics approval, contracts, law, or institutional policy.</p>
+<p>The decision should be made before dictation or upload. Low-risk material can use a commercial service after a current policy check. Unpublished or collaborative material requires an explicit agreement about processing and retention. Protected research material requires an institutionally approved or local environment, and may not be eligible for automated processing at all. Removing names is not enough when context can identify a person.</p>
+<p>Product settings and policies change more quickly than this method. The dated tool cards record current language support, storage, training, and privacy settings. The researcher records the policy and settings actually reviewed on the date of use.</p>
+</section>
+</section>
+<section id="worked-example" class="level2" data-number="23.3">
+<h2 data-number="23.3" class="anchored" data-anchor-id="worked-example"><span class="header-section-number">23.3</span> Worked Example</h2>
+<p>A researcher is drafting a methods passage about how newspaper reports become candidate records in an event database. The capture brief states that the passage must distinguish a report from an event, explain duplicate reporting, and avoid making any accuracy claim not supported by the validation results. The researcher dictates for four minutes in English, speaking the core distinction before adding an example.</p>
+<p>The recognition system renders a project name incorrectly, turns “source report” into “source support,” and inserts a full stop that changes the qualification at the end of a sentence. The researcher preserves the raw capture, checks the three errors immediately, and saves a corrected transcript. An AI assistant is then asked to identify repeated propositions and propose two possible orders. It is not asked to rewrite the passage or add evidence. The researcher chooses one order and drafts the paragraph manually.</p>
+<p>During the slow listening pass, the synthetic voice exposes a repeated preposition and a sentence with two competing subjects. During the normal-speed pass, the paragraph sounds persuasive but moves directly from duplicate reports to a claim about causal sequence. The listening log marks this as an argument problem, not a sound problem. The researcher returns to the evidence register and discovers that the paragraph needs an explicit sentence separating event resolution from causal inference.</p>
+<p>The passage is then translated into Hebrew for discussion with a collaborator. Playback reveals that the chosen Hebrew term can mean either a news item or an event record. The two authors agree on a more precise term and add it to the project glossary. Listening did not validate the method. It made a conceptual ambiguity audible and sent the researcher back to the project record.</p>
+</section>
+<section id="try-it" class="level2" data-number="23.4">
+<h2 data-number="23.4" class="anchored" data-anchor-id="try-it"><span class="header-section-number">23.4</span> Try It</h2>
+<p>Select a passage of 250 to 400 words that does not contain protected material. The passage may be a new explanation, a section of a literature review, or a methods note. Use the downloadable <a href="../templates/voice-round-trip-log.md">voice round-trip log</a> to complete four short passes.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 40%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pass</th>
+<th style="text-align: right;">Time</th>
+<th>Required result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Prepare and dictate</td>
+<td style="text-align: right;">8 minutes</td>
+<td>Capture brief and raw recognized text</td>
+</tr>
+<tr class="even">
+<td>Verify and structure</td>
+<td style="text-align: right;">8 minutes</td>
+<td>Corrected transcript and structured draft</td>
+</tr>
+<tr class="odd">
+<td>Listen</td>
+<td style="text-align: right;">6 minutes</td>
+<td>Location-coded listening notes</td>
+</tr>
+<tr class="even">
+<td>Judge and revise</td>
+<td style="text-align: right;">8 minutes</td>
+<td>Revised passage and change summary</td>
+</tr>
+</tbody>
+</table>
+<p>At the end, classify every accepted change as recognition correction, prose revision, translation correction, or substantive argument revision. If a change cannot be classified, inspect the versions until its origin becomes clear.</p>
+</section>
+<section id="guided-ai-workflow" class="level2" data-number="23.5">
+<h2 data-number="23.5" class="anchored" data-anchor-id="guided-ai-workflow"><span class="header-section-number">23.5</span> Guided AI Workflow</h2>
+<p>An AI assistant can help organize a personal dictated draft, but its role must be narrower than “improve my writing.” Supply the corrected transcript, the capture brief, and the required output form. Do not supply audio or text that the chosen system is not authorized to process.</p>
+<p><strong>Permitted input:</strong> a corrected personal dictation transcript, a passage purpose, a list of required claims, and a list of terms that must remain unchanged.</p>
+<p><strong>Do not provide:</strong> participant speech, restricted records, unpublished coauthor text without permission, or references that have not been verified.</p>
+<p>Use this instruction:</p>
+<blockquote class="blockquote">
+<p>Act as a structure analyst for a dictated academic draft. Do not add facts, citations, examples, or interpretations. Identify repeated propositions, unfinished claims, unclear referents, and places where the order obscures the argument. Return: (1) a proposition list using the transcript’s own words, (2) two possible orders, (3) a list of text that would be omitted in each order, and (4) questions that require the author’s judgment. Quote the source span for every observation. Do not produce polished replacement prose.</p>
+</blockquote>
+<p><strong>Verify:</strong> compare every quoted span with the corrected transcript. Confirm that the proposed orders preserve qualifications and do not detach a claim from its evidence. Reject any new content.</p>
+<p><strong>Record:</strong> application or model, date, input version, prompt version, accepted suggestions, rejected suggestions, and the researcher who approved the change.</p>
+<p>After the listening pass, a second bounded instruction may classify the writer’s own location-coded notes. It may group problems by type and prepare a checklist. It should not decide which substantive revisions to accept.</p>
+</section>
+<section id="integrity-checkpoint" class="level2" data-number="23.6">
+<h2 data-number="23.6" class="anchored" data-anchor-id="integrity-checkpoint"><span class="header-section-number">23.6</span> Integrity Checkpoint</h2>
+<p>Before the revised passage becomes canonical, confirm that the voice workflow did not change the evidentiary status of the text. Every name, number, quotation, and citation remains checked against its source. A fluent spoken rendering is not evidence that a sentence is true. A natural translation is not evidence that it is equivalent. A confident synthetic pronunciation is not evidence that a proper name is correct.</p>
+<p>Confirm also that all audio and text processing complied with the project’s consent, ethics, contractual, and institutional requirements. Record whether the service processed data locally or remotely, whether it retained inputs, and which settings governed model improvement or synchronization. If these facts cannot be established, do not use protected material.</p>
+<p>Finally, inspect authorship. Dictation preserves the researcher’s speech, but an AI restructuring pass may introduce substantial editorial intervention. The accepted text remains the authors’ responsibility. Project records should state where AI changed structure or wording when that information is relevant to the venue, collaborator agreement, or research audit.</p>
+</section>
+<section id="save-the-artifact" class="level2" data-number="23.7">
+<h2 data-number="23.7" class="anchored" data-anchor-id="save-the-artifact"><span class="header-section-number">23.7</span> Save the Artifact</h2>
+<p>Save the session as a small, linked package rather than as one repeatedly overwritten document. A compact record begins with <code>voice-session.yml</code>, which records the date, writer, language, tool, settings, and sensitivity class. <code>01-capture-brief.md</code> states the purpose, required claims, and exclusions. <code>02-raw-transcript.txt</code> preserves the uncorrected recognized text, while <code>03-corrected-transcript.md</code> records fidelity corrections and their reasons.</p>
+<p>The composition continues in <code>04-structured-draft.md</code>. A disposable <code>05-listening-copy.txt</code> prepares the text for playback without changing the manuscript. <code>06-listening-log.md</code> records locations, problem types, and proposed actions. The candidate manuscript passage appears in <code>07-revised-passage.md</code>. Finally, <code>08-change-summary.md</code> records accepted and rejected changes and the reasons for each decision.</p>
+<p>The folder belongs beside the project memo or manuscript section it supports. The canonical manuscript links to the accepted passage, not to the raw audio. Audio retention follows the sensitivity decision made before capture. When the audio is deleted, the session record states when and why.</p>
+</section>
+<section id="advanced-practice" class="level2" data-number="23.8">
+<h2 data-number="23.8" class="anchored" data-anchor-id="advanced-practice"><span class="header-section-number">23.8</span> Advanced Practice</h2>
+<p>A mature voice workflow can support more than convenience. Researchers can use dictation for post-interview memos, fieldwork reflections, rapid explanations of figures, and spoken comparison of competing interpretations. Listening can support accessibility review, translation workshops, collaborative editing, and preparation for talks. Each use should have its own brief, authorized input class, and output artifact.</p>
+<p>Teams can also maintain a voice benchmark for the project. The benchmark contains public or synthetic text representing the project’s languages, names, dates, specialized vocabulary, citations, and code-switching patterns. A tool change is accepted only after the team compares its errors with the prior version. The goal is not one universal accuracy score. It is to identify errors that would matter for this research.</p>
+<p>Future agents may coordinate the sequence by opening a capture file, preserving a version, preparing a listening copy, and staging a revision checklist. Their authority should stop before substantive acceptance. The agent may expose a change. It may not decide that a causal qualification, participant meaning, or translation distinction is expendable.</p>
+<p>Voice extends the research interface beyond the screen. Used carefully, it gives the scholar two productive forms of distance: enough distance from the blank page to speak an imperfect first draft, and enough distance from familiar prose to hear what the page actually says.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-garrison2009tts" class="csl-entry" role="listitem">
+Garrison, Kevin. <span>“An Empirical Analysis of Using Text-to-Speech Software to Revise First-Year College Students’ Essays.”</span> <em>Computers and Composition</em> 26, no. 4 (2009): 288–301. <a href="https://doi.org/10.1016/j.compcom.2009.09.002">https://doi.org/10.1016/j.compcom.2009.09.002</a>.
+</div>
+<div id="ref-kim2025myth" class="csl-entry" role="listitem">
+Kim, Soo Hyon. <span>“The Myth of Revising by Ear: Does It Help Multilingual Writers?”</span> <em>The Writing Center Journal</em> 43, no. 3 (2025). <a href="https://doi.org/10.7771/2832-9414.2125">https://doi.org/10.7771/2832-9414.2125</a>.
+</div>
+<div id="ref-lin2024rambler" class="csl-entry" role="listitem">
+Lin, Susan, Jeremy Warner, J. D. Zamfirescu-Pereira, Matthew G. Lee, Sauhard Jain, Shanqing Cai, Piyawat Lertvittayakumjorn, et al. <span>“Rambler: Supporting Writing with Speech via <span>LLM</span>-Assisted Gist Manipulation.”</span> In <em>Proceedings of the 2024 CHI Conference on Human Factors in Computing Systems</em>. Association for Computing Machinery, 2024. <a href="https://doi.org/10.1145/3613904.3642217">https://doi.org/10.1145/3613904.3642217</a>.
+</div>
+<div id="ref-liu2022typist" class="csl-entry" role="listitem">
+Liu, Can, Siying Hu, Li Feng, and Mingming Fan. <span>“Typist Experiment: An Investigation of Human-to-Human Dictation via Role-Play to Inform Voice-Based Text Authoring.”</span> <em>Proceedings of the ACM on Human-Computer Interaction</em> 6 (2022). <a href="https://doi.org/10.1145/3555758">https://doi.org/10.1145/3555758</a>.
+</div>
+<div id="ref-ugan2024decm" class="csl-entry" role="listitem">
+Ugan, Enes Yavuz, Ngoc-Quan Pham, and Alexander Waibel. <span>“<span>DECM</span>: Evaluating Bilingual <span>ASR</span> Performance on a Code-Switching/Mixing Benchmark.”</span> In <em>Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation</em>, 4468–75. Torino, Italy: ELRA; ICCL, 2024. <a href="https://aclanthology.org/2024.lrec-main.400/">https://aclanthology.org/2024.lrec-main.400/</a>.
+</div>
+</div>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p><a href="#ref-liu2022typist" role="doc-biblioref">Can Liu et al., <span>“Typist Experiment: An Investigation of Human-to-Human Dictation via Role-Play to Inform Voice-Based Text Authoring,”</span> <em>Proceedings of the ACM on Human-Computer Interaction</em> 6 (2022), <span>https://doi.org/10.1145/3555758</span></a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p><a href="#ref-lin2024rambler" role="doc-biblioref">Susan Lin et al., <span>“Rambler: Supporting Writing with Speech via <span>LLM</span>-Assisted Gist Manipulation,”</span> in <em>Proceedings of the 2024 CHI Conference on Human Factors in Computing Systems</em> (Association for Computing Machinery, 2024), <span>https://doi.org/10.1145/3613904.3642217</span></a>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p><a href="#ref-garrison2009tts" role="doc-biblioref">Kevin Garrison, <span>“An Empirical Analysis of Using Text-to-Speech Software to Revise First-Year College Students’ Essays,”</span> <em>Computers and Composition</em> 26, no. 4 (2009): 288–301, <span>https://doi.org/10.1016/j.compcom.2009.09.002</span></a>.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p><a href="#ref-ugan2024decm" role="doc-biblioref">Enes Yavuz Ugan, Ngoc-Quan Pham, and Alexander Waibel, <span>“<span>DECM</span>: Evaluating Bilingual <span>ASR</span> Performance on a Code-Switching/Mixing Benchmark,”</span> in <em>Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation</em> (Torino, Italy: ELRA; ICCL, 2024), 4468–75, <span>https://aclanthology.org/2024.lrec-main.400/</span></a>.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p><a href="#ref-kim2025myth" role="doc-biblioref">Soo Hyon Kim, <span>“The Myth of Revising by Ear: Does It Help Multilingual Writers?”</span> <em>The Writing Center Journal</em> 43, no. 3 (2025), <span>https://doi.org/10.7771/2832-9414.2125</span></a>.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script>
+(() => {
+  if (!document.querySelector("[data-evidence-map-pilot]")) return;
+  const offset = document.querySelector('meta[name="quarto:offset"]')?.content || "";
+  const script = document.createElement("script");
+  script.src = `${offset}assets/evidence-map-pilot.js`;
+  script.defer = true;
+  document.body.append(script);
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../content/20-pkm-and-ai-research-infrastructure.html" class="pagination-link" aria-label="From Notes to Research Infrastructure">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">From Notes to Research Infrastructure</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../content/skills-and-agents-lab.html" class="pagination-link" aria-label="Skills and Agents Lab">
+        <span class="nav-page-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Skills and Agents Lab</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

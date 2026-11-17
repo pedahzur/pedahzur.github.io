@@ -1,0 +1,83 @@
+/* Research-workflows hub. Layout idea: a survey map sheet. Grid squares, relief tints, a legend. */
+:root{
+  --sheet:#d3f1e3; --grid:#7fd0b8; --paper:#fffdf4; --ink:#0e2247; --muted:#3d4f6e;
+  --route:#e5126b; --relief:#17a673; --water:#8ad8f2; --deep:#2fa8de; --sun:#ffc531; --high:#ff8a3c;
+  --head:"Barlow Condensed","Arial Narrow",sans-serif; --body:"Source Serif 4",Georgia,serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--sheet);color:var(--ink);font-family:var(--body);font-size:1.125rem;line-height:1.55;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:80px 80px}
+img,svg{max-width:100%}
+a{color:var(--ink)}
+:focus-visible{outline:3px solid var(--route);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding-block:18px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.site-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 24px;border:2px solid var(--ink);border-bottom-width:6px;background:var(--sun);padding:10px 16px}
+.site-head .name{font-family:var(--head);font-weight:700;font-size:1.375rem;letter-spacing:.04em;text-transform:uppercase;text-decoration:none}
+.site-head nav{display:flex;flex-wrap:wrap;gap:4px 18px}
+.site-head nav a{font-family:var(--head);font-size:1.0625rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;border-bottom:3px solid transparent;padding-block:4px}
+.site-head nav a:hover,.site-head nav a[aria-current="page"]{border-color:var(--route)}
+.panel{border:2px solid var(--ink);background:var(--paper)}
+.hero{position:relative;border-top:0;overflow:hidden}
+.hero .terrain{position:absolute;inset:0;width:100%;height:100%}
+.hero .in{position:relative;padding:clamp(22px,5vw,54px);max-width:740px}
+.hero p{margin:0;max-width:56ch;background:color-mix(in srgb,var(--paper) 86%,transparent)}
+.coord{font-family:var(--head);font-size:.9375rem;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;margin:0 0 8px}
+h1{font-family:var(--head);font-weight:700;text-transform:uppercase;font-size:clamp(2.5rem,8vw,5.25rem);line-height:.95;letter-spacing:.01em;margin:0 0 18px;text-wrap:balance}
+.page h1{font-size:clamp(2.25rem,6.5vw,4rem)}
+.section-label{font-family:var(--head);font-size:1.25rem;letter-spacing:.1em;text-transform:uppercase;margin:0 0 8px}
+.section-label span{color:var(--route);margin-right:8px}
+.board{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:24px;margin-top:28px}
+.posts{display:grid;align-self:start}
+.challenge-card{display:grid;grid-template-columns:86px minmax(0,1fr);gap:0 18px;padding:18px;border-bottom:1px solid var(--ink);border-left:10px solid var(--route);text-decoration:none;color:inherit}
+.challenge-card:last-child{border-bottom:0}
+.challenge-card .ref{font-family:var(--head);font-weight:700;font-size:1.625rem;line-height:1}
+.challenge-card .ref small{display:block;font-size:.75rem;letter-spacing:.1em;color:var(--muted);font-weight:600;margin-top:4px}
+.challenge-card h3{font-family:var(--head);font-weight:600;font-size:1.75rem;line-height:1.08;margin:0 0 4px;text-wrap:balance}
+.challenge-card p{margin:0;font-size:1rem;color:var(--muted)}
+.challenge-card:hover h3{color:var(--route)}
+.next{padding:16px 18px;border-top:2px solid var(--ink);background:color-mix(in srgb,var(--water) 35%,var(--paper))}
+.next ul{margin:6px 0 0;padding-left:20px;font-size:1rem}
+.legend{padding:14px;font-size:.9375rem;align-self:start}
+.legend h2{font-family:var(--head);font-size:1.0625rem;letter-spacing:.1em;text-transform:uppercase;margin:0 0 8px;border-bottom:1px solid var(--ink);padding-bottom:4px}
+.legend dl{margin:0;display:grid;grid-template-columns:28px 1fr;gap:8px;align-items:center}
+.legend dd{margin:0}
+.sym{width:24px;height:12px;display:inline-block}
+.sym.route{border-top:3px dashed var(--route)}
+.sym.hazard{background:repeating-linear-gradient(135deg,transparent 0 3px,var(--route) 3px 5px);border:1px solid var(--route)}
+.sym.kit{background:var(--water);border:1px solid var(--ink)}
+.sym.case{background:var(--sun);border:1px solid var(--ink)}
+.bands{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px;margin-top:28px}
+.band{padding:18px;min-width:0}
+.band h2{font-family:var(--head);font-size:1.75rem;text-transform:uppercase;letter-spacing:.03em;margin:0 0 6px;line-height:1.05}
+.band p{margin:0 0 10px;font-size:1rem}
+.band.sun{background:var(--sun)}.band.water{background:var(--water)}.band.relief{background:#b9ecc9}
+.btn{display:inline-block;font-family:var(--head);font-weight:600;font-size:1.125rem;letter-spacing:.06em;text-transform:uppercase;background:var(--ink);color:var(--paper);padding:8px 16px;text-decoration:none}
+.btn:hover{background:var(--route)}
+.page{padding:clamp(20px,5vw,48px);border-top:0}
+.lede{max-width:60ch;font-size:1.25rem;margin:0}
+.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:0 36px;margin-top:22px}
+.sec{border-top:2px solid var(--ink);padding:14px 0 18px;min-width:0}
+.sec h2{font-family:var(--head);font-size:1.25rem;letter-spacing:.1em;text-transform:uppercase;margin:0 0 8px}
+.sec h2 span{color:var(--route);margin-right:8px}
+.sec p{margin:0 0 10px;max-width:64ch}
+.sec ol,.sec ul{margin:0 0 10px;padding-left:22px;max-width:64ch}
+.wide{grid-column:1/-1}
+.fail-box{background:repeating-linear-gradient(135deg,transparent 0 10px,color-mix(in srgb,var(--route) 12%,transparent) 10px 20px);padding:12px 14px;border:1px solid var(--route)}
+.fail-box p:last-child{margin-bottom:0}
+.case-box{background:color-mix(in srgb,var(--sun) 40%,var(--paper));padding:12px 14px;border:1px solid var(--ink)}
+.kit-box{background:var(--water);border:2px solid var(--ink);padding:16px}
+.workflow-diagram{overflow-x:auto;margin-bottom:8px}
+.workflow-diagram text{font-family:var(--head);font-size:15px;fill:var(--ink);letter-spacing:.04em}
+.prose{max-width:66ch}
+.prose h2{font-family:var(--head);font-size:1.75rem;text-transform:uppercase;letter-spacing:.03em;margin:34px 0 8px;border-top:2px solid var(--ink);padding-top:12px}
+.prose h2 span{color:var(--route);margin-right:10px}
+.prose p{margin:0 0 12px}
+.prose pre{background:var(--ink);color:var(--paper);padding:14px;overflow-x:auto;font-size:.9375rem;line-height:1.45}
+.prose code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.9em}
+.prose .see{font-family:var(--head);font-size:1.0625rem;letter-spacing:.04em;text-transform:uppercase}
+.draft{font-family:var(--head);letter-spacing:.08em;text-transform:uppercase;font-size:.875rem;background:var(--route);color:#fff;display:inline-block;padding:2px 8px;margin:0 0 12px}
+.site-foot{margin-top:28px;padding:14px 16px;font-size:.9375rem;display:flex;flex-wrap:wrap;gap:6px 24px;justify-content:space-between}
+@media(max-width:760px){.board{grid-template-columns:1fr}.challenge-card{grid-template-columns:64px minmax(0,1fr)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media(max-width:760px){.hero .terrain{opacity:.4}}
